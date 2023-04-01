@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+
+
+        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="https://kit.fontawesome.com/a937b1ae31.js" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section>
+            <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+                <div>
+                <i class="fa-solid fa-p fa-3x"></i>
+                <a class="navbar-brand" href="">ortfolio</a>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav ms-auto" >
+                    <li class="nav-item">
+                       <a class="nav-link" href="index.html"> HOME</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html"> Education</a> 
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="experience.html"> Experience</a> 
+                     </li>
+                     
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html"> Contact</a> 
+                     </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <div class="ash">
+                <img  class="basic"src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg"> 
+            <form class="inline" onsubmit="sendEmail(); reset(); return false;">
+                <h1>Contact Me</h1>
+                <div class="input-icons" >
+                    <i class="fa fa-user icon"></i>
+                    <input class="input-field" type="text" placeholder="Name" id="name">
+                    <i class="fa fa-envelope icon"></i>
+                    <input class="input-field" type="email" placeholder="Email" id="email">
+                    <i class="fa fa-phone icon"></i>
+                    <input class="input-field" type="text" placeholder="Phone" id="phone">
+                    <i class="fa-solid fa-message-dots icon fa"></i>
+                    <textarea class="input-field" name="subject" placeholder="Write something.." style="height:200px" id="message"></textarea>
+                    <input type="submit" value="Submit" >
+                </div>
+          </form>
+          </div>
+
+
+        </section>
+          
+        
+     
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+     <script>
+        function sendEmail(){
+    Email.send({
+        Host :"smtp.elasticemail.com",
+        Username :"tyagi11000@gmail.com",
+        Password :"7F97CFED49F1235FA467E331CBF9C930BAAC",
+        To : 'yash.1923ec1046@kiet.edu',
+        From :document.getElementById("email").value,
+        Subject: "Enquiry from portfolio website",
+        Body: "Name :" +document.getElementById("name").value 
+        +"<br> Email :" + document.getElementById("email").value
+        +"<br> Phone :" +document.getElementById("phone").value
+        +"<br> Message :" +document.getElementById("message").value
+
+    }).then(  message => alert("mail sent successfully"));
+
+    }
+     </script>
+
+<footer class="foot bg-dark">
+    <h3>Thanks for visting my website.Don't hesitate to reach out using the links below</h3>
+    <a  href="https://www.linkedin.com/in/yash-tyagi-7273b6201/" class="btn btn-dark btn-sm logo" role="button" aria-pressed="true"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+    <a  href="https://github.com/"                               class="btn btn-dark btn-sm logo" role="button" aria-pressed="true"><i class="fa-brands fa-square-github fa-2x"></i></i></a>
+    <a  href="https://twitter.com/tyagi11000"                    class="btn btn-dark btn-sm logo" role="button" aria-pressed="true"><i class="fa-brands fa-twitter fa-2x"></i></a>
+    <a href="https://www.instagram.com/yashtyagi1100/"           class="btn btn-dark btn-sm logo" role="button" aria-pressed="true"><i class="fa-brands fa-instagram fa-2x"></i></a>
+    <p class="copy">copyright<i class="fa-regular fa-copyright"></i>2023</p>
+</footer>
+    </body>
+</html>
